@@ -47,11 +47,12 @@
   const solido = new SolidoModule(contractMappings);
   const provider = new WsProvider('ws://127.0.0.1:9944');
   const PRIVATE_KEY = '...';
-  const ACCOUNT = '5GrpknVvGGrGH3EFuURXeMrWHvbpj3VfER1oX5jFtuGbfzCE';```
+  const ACCOUNT = '5GrpknVvGGrGH3EFuURXeMrWHvbpj3VfER1oX5jFtuGbfzCE';
+  ```
 
   Additionally, the solid form handles a series of predefined methods that drastically simplifies and unifies the interaction with smart contracts, both for the methods that query values ​​in said smart contracts, as well as for the methods that alter values ​​in said smart contracts and therefore expect payment on those transactions, as listed below:
 
-  `export class polkDOT.js extends SolidoProvider implements SolidoContract {
+  ```export class polkDOT.js extends SolidoProvider implements SolidoContract {
   private ws: WsProvider;
   public network: string;
   private instance: any;
@@ -116,7 +117,7 @@
     eventFilter?: EventFilter<T & any>
   ): Promise<(P)[]> {
     ...
-  }`
+  }```
 
   In a second stage, the development of a structure based on standard schemas for the blockchain ecosystem that allows at the rpc level is foreseen, such that it allows calls to rpc functions from a standard predefined command system, completely abstracting the RPC layer from the blockchain facing the dapp and allowing a smooth migration, for example, from a blockchain like Ethereum to one like PolkaDOT / Substrate, without the dapp code being affected almost at all by said migration, significantly accelerating the migration dapp from solidity / ethereum environment to! ink / substrate.io. all this within the vision of Rosseta-api.org as an open standard designed to simplify the deployment and interaction with a blockchain, abstracting for the user the depth details of said particular implementation presenting a standard interface for multiple scenarios, platform and blockchain and interconnection providers to those blockchains.
 
@@ -130,7 +131,7 @@
 
   All this within a clean interface, based on typescript that is a strongly typed language, which in turn simplifies the debugging work of the developers of said dapp, at the moment of precisely identifying the different types of data that events can drive within a smart contract.
 
-  `/***
+  ```/***
      * Dispatches a reactive subscription for an event
      * @returns A cancellable ticket
      */
@@ -161,7 +162,7 @@
         }
 
         return cancellable;
-    }`
+    }```
 
 
   And having the entire Rx.JS operators for managing events, a number of options are available from solid to event management, subscribe and unsubscribe to an event or multiples events, with multiple functions available.
@@ -173,7 +174,7 @@
   Allowing to handle multiple scenarios, which includes a clean and elegant user interface from solid, allowing a clear simple development completely abstracting the interconnection layer of the dapp with the smart contract, making a data binding of said smart contract, in addition to allowing a lazy loading of one or multiple smart contracts in a dynamic way with a single interface that can be unstructured within the code, taking advantage of the benefits of typescript, handling contracts and their methods in an agile and simplified way. And regardless of the blockchain or provider that supports your connection.
 
   
-  `// Create Solido Module
+  ```// Create Solido Module
   export const module = new SolidoModule(
     [
       {
@@ -249,4 +250,4 @@
   (async () => {
     const balance = await token.balanceOf(defaultAccount);
     console.log(balance);
-  })();`
+  })();```
