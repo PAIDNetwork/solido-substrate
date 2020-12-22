@@ -14,7 +14,7 @@
   - Include support for user interface to smart contracts data binding
 
 
-  ### Add Ink! Smart Contracts and/or PolkadotJS provider interface
+  ### **Add Ink! Smart Contracts and/or PolkadotJS provider interface.**
 
   From the previous work carried out in solid, as reflected in the github repository indicated in the introduction, the ability to integrate different providers widely used in the solidity smart contract ecosystem such as web3.js and Ether.js can be appreciated. in addition to provider injected as metamask for ETHEREUM and connex for VeChain, in addition to taking into account that the @polkadot/api-contract interfaces provide a thin layer on the available API transactions to allow you to manage the substrate contracts in a consistent way.
 
@@ -22,11 +22,12 @@
 
   This would dramatically speed up the implementation of! Ink as the language for smart contract development on substrato.io, thus allowing early adoption of these platforms in the smart contract production environment, almost totally dominated by robustness at the moment. Mainly due to the fact that there are very few quick and easy tools to implement for Dapp developers on the substrate.io/polkaDOT platform.
 
-  ### Integrate a subset or parts of Rosetta oriented towards client RPC scenarios
+  ### **Integrate a subset or parts of Rosetta oriented towards client RPC scenarios**
 
   In a first stage, a simple scheme of standard methods for handling dapp is foreseen that allows the integration of the interface provided by the polkadot library {.js} from it to generate a set of already predefined methods that are compatible with almost any industry standard provider like web 3 or ether.js, this can be seen in the following example:
 
-  ```// Setup contract mappings
+  ```
+  // Setup contract mappings
   const contractMappings = [
     {
       name: 'polkaDOT',
@@ -123,11 +124,11 @@
 
   In a second stage, the development of a structure based on standard schemas for the blockchain ecosystem that allows at the rpc level is foreseen, such that it allows calls to rpc functions from a standard predefined command system, completely abstracting the RPC layer from the blockchain facing the dapp and allowing a smooth migration, for example, from a blockchain like Ethereum to one like PolkaDOT / Substrate, without the dapp code being affected almost at all by said migration, significantly accelerating the migration dapp from solidity / ethereum environment to! ink / substrate.io. all this within the vision of Rosseta-api.org as an open standard designed to simplify the deployment and interaction with a blockchain, abstracting for the user the depth details of said particular implementation presenting a standard interface for multiple scenarios, platform and blockchain and interconnection providers to those blockchains.
 
-  ### Add missing wallet and signing interfaces
+  ### **Add missing wallet and signing interfaces**
 
   Another important feature that can be handled within solid form is the ability to integrate additional capabilities to connectors or interface providers such as web3 or ether, for example integrating solutions such as XDV, which is a multi-signature wallet that allows the handling of signing interfaces that It does not natively handle a certain wallet or dapp, it can be managed from a solid interface integrating these characteristics, the dapp with a clean and standard interface.
 
-  ### Simplify event subscription using reactive patterns
+  ### **Simplify event subscription using reactive patterns**
 
   Another important feature that can be handled within solido form is the ability to handle events through industry-proven design patterns that are difficult to implement many times for developers such as the observables design pattern, a reactive event handling pattern. , ideal for managing smart contract events.
 
@@ -166,16 +167,16 @@
 
         return cancellable;
     }
-    ```
-
+  ```
+  
 
   And having the entire Rx.JS operators for managing events, a number of options are available from solid to event management, subscribe and unsubscribe to an event or multiples events, with multiple functions available.
 
-  ### Include support for user interface to smart contracts data binding
+  ### **Include support for user interface to smart contracts data binding**
 
   As explained, solid is an entity mapper that scores a contract for Solidity based on its generated ABI. Once a contract is annotated with decorators or auto-generated, you can enable it on a blockchain using a plugin provider.
 
-  Allowing to handle multiple scenarios, which includes a clean and elegant user interface from solid, allowing a clear simple development completely abstracting the interconnection layer of the dapp with the smart contract, making a data binding of said smart contract, in addition to allowing a lazy loading of one or multiple smart contracts in a dynamic way with a single interface that can be unstructured within the code, taking advantage of the benefits of typescript, handling contracts and their methods in an agile and simplified way. And regardless of the blockchain or provider that supports your connection.
+  Allowing to handle multiple scenarios, which includes a clean and elegant user interface from solid, allowing a clear simple development completely abstracting the interconnection layer of the dapp with the smart contract, making a data binding of said smart contract, in addition to allowing a *lazy loading* of one or multiple smart contracts in a dynamic way with a single interface that can be unstructured within the code, taking advantage of the benefits of typescript, handling contracts and their methods in an agile and simplified way. And regardless of the blockchain or provider that supports your connection.
 
   
   ```
@@ -208,9 +209,6 @@
 
   // polkaDOT interact with the deployed contract
   const contract = new ContractPromise(api, abi, address);
-
-  const { wallet } = driver;
-  wallet.add(PRIVATE_KEY);
 
   const contracts = module.bindContracts({
     'metamask': {
