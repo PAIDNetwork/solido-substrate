@@ -26,7 +26,7 @@
 
   In a first stage, a simple scheme of standard methods for handling dapp is foreseen that allows the integration of the interface provided by the polkadot library {.js} from it to generate a set of already predefined methods that are compatible with almost any industry standard provider like web 3 or ether.js, this can be seen in the following example:
 
-  `// Setup contract mappings
+  ```// Setup contract mappings
   const contractMappings = [
     {
       name: 'polkaDOT',
@@ -47,7 +47,7 @@
   const solido = new SolidoModule(contractMappings);
   const provider = new WsProvider('ws://127.0.0.1:9944');
   const PRIVATE_KEY = '...';
-  const ACCOUNT = '5GrpknVvGGrGH3EFuURXeMrWHvbpj3VfER1oX5jFtuGbfzCE';`
+  const ACCOUNT = '5GrpknVvGGrGH3EFuURXeMrWHvbpj3VfER1oX5jFtuGbfzCE';```
 
   Additionally, the solid form handles a series of predefined methods that drastically simplifies and unifies the interaction with smart contracts, both for the methods that query values ​​in said smart contracts, as well as for the methods that alter values ​​in said smart contracts and therefore expect payment on those transactions, as listed below:
 
