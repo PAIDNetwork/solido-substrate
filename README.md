@@ -24,7 +24,7 @@
 
   ### **Integrate a subset or parts of Rosetta oriented towards client RPC scenarios**
 
-  In a first stage, a simple scheme of standard methods for handling dapp is foreseen that allows the integration of the interface provided by the polkadot library {.js} from it to generate a set of already predefined methods that are compatible with almost any industry standard provider like web 3 or ether.js, this can be seen in the following example:
+  In a first stage, a simple scheme of standard methods for handling dapp is foreseen that allows the integration of the interface provided by the polkadot{.js} library from it to generate a set of already predefined methods that are compatible with almost any industry standard provider like web3.js or ether.js, this can be seen in the following example:
 
   ```
   // Setup contract mappings
